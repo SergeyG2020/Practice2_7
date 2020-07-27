@@ -1,6 +1,5 @@
-let money = prompt("Ваш бюджет на месяц?", ''),
-	time = prompt('Введите дату в формате YYYY-MM-DD', '');
-
+let money = prompt("Введите обязательную статью расходов в этом месяце", ''),
+	time = prompt("Во сколько обойдется?", '');
 let appData = {
 	budget: money,
 	expenses: {},
@@ -9,7 +8,6 @@ let appData = {
 	timeData: time,
 	savings: false
 };
-
 
 for (let i = 0; i < 2; i++) {
 	let a = prompt("Введите обязательную статью расходов в этом месяце", ''),
@@ -20,6 +18,7 @@ for (let i = 0; i < 2; i++) {
 				console.log("done");
 				appData.expenses[a] = b;
 			} else {
+				console.log("Not done. Try again!");
 				i--;
 			}
 }
@@ -34,5 +33,5 @@ if (appData.moneyPerDay < 100) {
 } else if (appData.moneyPerDay > 2000 && appData.moneyPerDay < 10000 ) {
 	console.log ("Высокий уровень достатка");
 } else {
-	console.log ("Что-то пошло  не так"):
+	console.log ("Что-то пошло  не так");
 }
