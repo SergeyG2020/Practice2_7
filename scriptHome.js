@@ -91,7 +91,7 @@ let appData = {
 appData.chooseIncome();
 
 for (let key in appData) {
-	alert("Наша программа включает в себя данные: " + key + appData[key]);
+	alert("Наша программа включает в себя данные: " + key + " " + appData[key]);
 }
 
 // let answer = prompt("", "");
@@ -99,3 +99,5 @@ for (let key in appData) {
 // arr = answer.split(' ');
 // arr.push('zzz');
 // console.log(arr);
+
+
